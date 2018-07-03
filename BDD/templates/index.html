@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tarea Jefferson</title>
+</head>
+<body>
+<h1>Nuevo Estudiante </h1>
+<form method="POST" action="/insertar.html">
+				      <input class="form-control col-md-4" type="text" name="newName" placeholder="Nombre">
+				      <input class="form-control col-md-4" type="text" name="newLastName" placeholder="Apellido">
+				      <input class="btn-success" type="submit" value="Insertar">
+</form>
+<h2>Registrados</h2>
+			    <table class="table ">
+			      <thead>
+			          <th>ID</th>
+			          <th>Nombre</th>
+			          <th>Apellido</th>
+			      </thead>
+			      <tbody>
+			        {% for Student in students %}
+			        <tr>
+				        <td class="tran">
+				           <p>{{student.}}</p>
+				        </td>
+				        <td class="tran">
+				           <p>{{student.name}}</p>
+				        </td>
+				        <td class="tran">
+				           <p>{{student.lastName}}</p>
+				        </td>
+			         </tr>
+			        {% endfor %}
+			      </tbody>			    
+			  	</table>
+</body>
+</html>
